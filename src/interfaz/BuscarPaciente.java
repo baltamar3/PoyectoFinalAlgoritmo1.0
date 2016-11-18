@@ -93,6 +93,12 @@ public class BuscarPaciente extends javax.swing.JDialog {
         jLabel20.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel20.setText("Identificación:");
         jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        txtIdentificacionBuscar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtIdentificacionBuscarKeyTyped(evt);
+            }
+        });
         jPanel4.add(txtIdentificacionBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 150, -1));
 
         cmdBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconosBotones/1478291605_Search-Male-User.png"))); // NOI18N
@@ -167,6 +173,11 @@ public class BuscarPaciente extends javax.swing.JDialog {
 
         txtIdentificacion.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         txtIdentificacion.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        txtIdentificacion.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtIdentificacionKeyTyped(evt);
+            }
+        });
         jPanel5.add(txtIdentificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 180, -1));
 
         jLabel23.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -191,6 +202,11 @@ public class BuscarPaciente extends javax.swing.JDialog {
 
         txtTelefono.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         txtTelefono.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        txtTelefono.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtTelefonoKeyTyped(evt);
+            }
+        });
         jPanel5.add(txtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 180, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -277,6 +293,11 @@ public class BuscarPaciente extends javax.swing.JDialog {
 
         txtEdad.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         txtEdad.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        txtEdad.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtEdadKeyTyped(evt);
+            }
+        });
         jPanel5.add(txtEdad, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 180, -1));
 
         jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 900, 210));
@@ -417,7 +438,7 @@ public class BuscarPaciente extends javax.swing.JDialog {
             }
             Helper.volcado(salida, pacientesMificados);
             Helper.mensaje(this, "Paciente Actualizado exitosamente", 1);
-            
+
             txtIdentificacion.setText("");
             txtIdentificacionBuscar.setText("");
             txtNombre.setText("");
@@ -574,6 +595,42 @@ public class BuscarPaciente extends javax.swing.JDialog {
         txtTipoDeEnfermedad.setEnabled(false);
         txtTipoDeEnfermedad.setText("Ninguna");
     }//GEN-LAST:event_rbEnfermoNoActionPerformed
+
+    private void txtIdentificacionBuscarKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIdentificacionBuscarKeyTyped
+        char c = evt.getKeyChar();
+        if (!Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtIdentificacionBuscarKeyTyped
+
+    private void txtIdentificacionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIdentificacionKeyTyped
+        char c = evt.getKeyChar();
+        if (!Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtIdentificacionKeyTyped
+
+    private void txtEdadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEdadKeyTyped
+        char c = evt.getKeyChar();
+        if (!Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtEdadKeyTyped
+
+    private void txtTelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelefonoKeyTyped
+        char c = evt.getKeyChar();
+        if (!Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtTelefonoKeyTyped
 
     /**
      * @param args the command line arguments

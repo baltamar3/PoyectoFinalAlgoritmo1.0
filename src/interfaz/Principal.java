@@ -128,6 +128,7 @@ public class Principal extends javax.swing.JFrame {
         mnCitas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         mnCitas.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
 
+        mnCrearCita.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         mnCrearCita.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         mnCrearCita.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconosMenu/1478295314_appointment-new.png"))); // NOI18N
         mnCrearCita.setText("Crear cita");
